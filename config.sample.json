@@ -1,0 +1,8 @@
+{
+    "webhook_url": "https://discord.com/api/webhooks/000000000000000000/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "avatar_url": "https://example.com/icon.png",
+    "user_name": "ウマ娘 誕生日お知らせBot",
+    "thumbnail": "https://example.com/thumbnail.png",
+    "color": "#ffffff",
+    "fields_count": 2
+}

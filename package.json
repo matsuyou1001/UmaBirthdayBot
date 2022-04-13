@@ -1,0 +1,26 @@
+{
+  "name": "umabirthdaybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "exec": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/matsuyou1001/UmaBirthdayBot.git"
+  },
+  "keywords": [
+    "bot",
+    "umamusume"
+  ],
+  "author": "matsuyou1001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matsuyou1001/UmaBirthdayBot/issues"
+  },
+  "homepage": "https://github.com/matsuyou1001/UmaBirthdayBot#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
