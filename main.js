@@ -19,7 +19,7 @@ if (todayumas.length == 0) {
     process.exit(1);
 }
 
-const title = format("今日は、%sの誕生日です。", todayumas.map(uma => func.replace_name(uma.name)).join("、"));
+const title = format("🎉 今日は、%sの誕生日です！", todayumas.map(uma => func.replace_name(uma.name)).join("、"));
 
 let current = today;
 const fields = [];
