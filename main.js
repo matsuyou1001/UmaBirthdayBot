@@ -36,7 +36,7 @@ for (let i = 1; i <= fields_count; i++ ) {
 
     fields.push({
         name: format("・%i/%i (%s)", date.getMonth() + 1, date.getDate(), days == 1 ? "明日" : days + "日後"),
-        value: "    " + nextumas.map(uma => uma.name).join("、")
+        value: nextumas.map(uma => uma.name).join("、")
     });
 
     current = nextday;
