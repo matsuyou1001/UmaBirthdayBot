@@ -59,6 +59,5 @@ if (typeof color === "string") {
     embeds[0].color = func.colorcode_to_hex(color);
 }
 
-if (!func.exec_webhook(webhook_url, avatar_url, username, null, embeds)) {
-    process.exit(1);
-}
+func.exec_webhook(webhook_url, avatar_url, username, null, embeds)
+    .catch(() => process.exit(1));

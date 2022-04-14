@@ -23,7 +23,7 @@ exports.exec_webhook = async function (url, avatar_url, username, content, embed
     }
     catch (error) {
         console.error(error);
-        return false;
+        throw error;
     }
 
     return true;
