@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "exec": "node main.js"
+    "exec": "node ./js/main.js"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,10 @@
 const fs = require("fs");
 const func = require("./functions.js");
-const {format} = require("util")
+const path = require("path");
+const {format} = require("util");
 
-const config = JSON.parse(fs.readFileSync("./config.json", "utf8"));
+const configPath = path.join(__dirname, "..", "config.json")
+const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 const webhook_url = config.webhook_url;
 const avatar_url = config.avatar_url;
 const username = config.user_name;
@@ -10,7 +12,8 @@ const thumbnail = config.thumbnail;
 const color = config.color;
 const fields_count = typeof config.fields_count === "undefined" ? 2 : Number(config.fields_count);
 
-const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
+const dataPath = path.join(__dirname, "..", "data.json")
+const data = JSON.parse(fs.readFileSync(dataPath, "utf8"));
 const now = new Date();
 const today = ("0" + (now.getMonth() + 1)).slice(-2) + "/" + ("0" + (now.getDate())).slice(-2);
 
