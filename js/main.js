@@ -1,7 +1,6 @@
 const fs = require("fs");
 const func = require("./functions.js");
 const path = require("path");
-const {format} = require("util");
 
 const configPath = path.join(__dirname, "..", "config.json")
 const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
@@ -22,7 +21,7 @@ if (todayumas.length == 0) {
     process.exit(1);
 }
 
-const title = format("🎉 今日は、%sの誕生日です！", todayumas.map(uma => func.replace_name(uma.name)).join("、"));
+const title = `🎉 今日は、${todayumas.map(uma => func.replace_name(uma.name)).join("、")}の誕生日です！`
 
 let current = today;
 const fields = [];
@@ -34,11 +33,11 @@ for (let i = 1; i <= fields_count; i++ ) {
         data.umamusumes.map(uma => uma.birthday).sort().find(day => current < day) ;
 
     const nextumas = data.umamusumes.filter(uma => uma.birthday == nextday)
-    const date = new Date(format("%i/%s", isLast ? now.getFullYear() + 1 : now.getFullYear(), nextday));
+    const date = new Date(`${isLast ? now.getFullYear() + 1 : now.getFullYear()}/${nextday}`)
     const days = Math.ceil((date - now) / 86400000);
 
     fields.push({
-        name: format("・%i/%i (%s)", date.getMonth() + 1, date.getDate(), days == 1 ? "明日" : days + "日後"),
+        name: `${date.getMonth() + 1}/${date.getDate()} (${days == 1 ? "明日" : days + "日後"})`,
         value: nextumas.map(uma => uma.name).join("、")
     });
 
