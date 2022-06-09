@@ -57,9 +57,7 @@ async function main() {
         }
     }
 
-    if (typeof color === "string") {
-        embeds[0].color = colorHelper.toHex(color);
-    }
+    embeds[0].color = typeof color === "string" ? colorHelper.toHex(color) : color;
 
     const successed = await webhooks.exec(webhook_url, avatar_url, user_name, null, embeds);
     return successed ? 0 : 1;
