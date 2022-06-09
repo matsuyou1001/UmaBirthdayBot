@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import url from "url";
-import functions from "./functions.js";
+import webhooks from "./webhooks.js";
 import colorHelper from "./colorHelper.js";
 
 async function main() {      
@@ -20,7 +20,7 @@ async function main() {
         return 1;
     }
 
-    const title = `🎉 今日は、${todayumas.map(uma => functions.replace_name(uma.name)).join("、")}の誕生日です！`
+    const title = `🎉 今日は、${todayumas.map(uma => replace_name(uma.name)).join("、")}の誕生日です！`
 
     let current = today, elapsedYears = 0;
     const fields = [];
@@ -61,8 +61,15 @@ async function main() {
         embeds[0].color = colorHelper.toHex(color);
     }
 
-    const successed = await functions.exec_webhook(webhook_url, avatar_url, user_name, null, embeds);
+    const successed = await webhooks.exec(webhook_url, avatar_url, user_name, null, embeds);
     return successed ? 0 : 1;
+}
+
+function replace_name(name) {
+    switch (name) {
+        case "エイシンフラッシュ": return "**_Eishin Flash_**💖";
+        default: return name;
+    }
 }
 
 const exitCode = await main();
