@@ -23,17 +23,18 @@ if (todayumas.length == 0) {
 
 const title = `🎉 今日は、${todayumas.map(uma => func.replace_name(uma.name)).join("、")}の誕生日です！`
 
-let current = today;
+let current = today, elapsedYears = 0;
 const fields = [];
 for (let i = 1; i <= fields_count; i++ ) {
     const isLast = !data.umamusumes.some(uma => current < uma.birthday);
+    if (isLast) elapsedYears++;
 
     const nextday = isLast ?
         data.umamusumes.map(uma => uma.birthday).sort().find(() => true) :
         data.umamusumes.map(uma => uma.birthday).sort().find(day => current < day) ;
 
     const nextumas = data.umamusumes.filter(uma => uma.birthday == nextday)
-    const date = new Date(`${isLast ? now.getFullYear() + 1 : now.getFullYear()}/${nextday}`)
+    const date = new Date(`${now.getFullYear() + elapsedYears}/${nextday}`)
     const days = Math.ceil((date - now) / 86400000);
 
     fields.push({
