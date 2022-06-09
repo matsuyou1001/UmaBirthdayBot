@@ -1,33 +1,34 @@
 import axios from 'axios';
+import colorHelper from "./colorHelper.js";
 
 class webhooks {    
-    static async exec(url, avatar_url, username, content, embeds) {
-        try {
-            const payload = {}
-            if (typeof avatar_url === "string") {
-                payload.avatar_url = avatar_url;
-            }
-            if (typeof username === "string") {
-                payload.username = username;
-            }
-            if (typeof content === "string") {
-                payload.content = content;
-            }
-            if (typeof embeds != "undefined") {
-                payload.embeds = embeds;
-            }
-        
-            await axios.post(
-                url,
-                payload
-            );
+    static async exec(
+        webhook_url,
+        {
+            username,
+            avatar_url,
+            content,
+            embeds,
+            tts = false
         }
-        catch (error) {
-            console.error(error);
-            throw error;
+    ) {
+        const payload = { tts: tts };
+        if (content != null)
+            payload["content"] = content;
+        if (username != null)
+            payload["username"] = username;
+        if (avatar_url != null)
+            payload["avatar_url"] = avatar_url;
+        if (embeds != null) {
+            embeds.forEach(embed => {
+                if (typeof embed.color === "string") {
+                    embed.color = colorHelper.toHex(embed.color);
+                }
+            });
+            payload["embeds"] = embeds;
         }
-    
-        return true;
+
+        await axios.post(webhook_url, payload);
     }
 }
 

@@ -2,7 +2,6 @@ import fs from "fs/promises";
 import path from "path";
 import url from "url";
 import webhooks from "./webhooks.js";
-import colorHelper from "./colorHelper.js";
 
 async function main() {      
     const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
@@ -44,23 +43,19 @@ async function main() {
         current = nextday;
     }
 
-    const embeds = [
-        {
-            title: title,
-            fields: fields,
-        }
-    ];
+    const embed = { title: title, fields: fields };
 
     if (typeof thumbnail === "string") {
-        embeds[0].thumbnail = {
-            url: thumbnail
-        }
+        embed.thumbnail = { url: thumbnail }
     }
 
-    embeds[0].color = typeof color === "string" ? colorHelper.toHex(color) : color;
+    if (typeof color !== "undefined") {
+        embed.color = color;
+    }
 
-    const successed = await webhooks.exec(webhook_url, avatar_url, user_name, null, embeds);
-    return successed ? 0 : 1;
+    await webhooks.exec(webhook_url, { username: user_name, avatar_url: avatar_url, embeds: [ embed ] });
+
+    return 0;
 }
 
 function replace_name(name) {
