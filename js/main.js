@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import url from "url";
 import functions from "./functions.js";
+import colorHelper from "./colorHelper.js";
 
 async function main() {      
     const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
@@ -57,7 +58,7 @@ async function main() {
     }
 
     if (typeof color === "string") {
-        embeds[0].color = functions.colorcode_to_hex(color);
+        embeds[0].color = colorHelper.toHex(color);
     }
 
     const successed = await functions.exec_webhook(webhook_url, avatar_url, user_name, null, embeds);

@@ -36,10 +36,6 @@ class functions {
             default: return name;
         }
     }
-
-    static colorcode_to_hex(colorcode) {
-        return parseInt(colorcode.substr(1, 2), 16) * 65536 + parseInt(colorcode.substr(3, 2), 16) * 256 + parseInt(colorcode.substr(5, 2), 16)
-    }
 }
 
 export default functions;
