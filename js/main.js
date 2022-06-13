@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import url from "url";
-import webhooks from "./webhooks.js";
+import webhooks from "./helper/webhooks.js";
 
 async function main() {      
     const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
