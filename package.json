@@ -5,7 +5,8 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
-    "exec": "node ./js/main.js"
+    "exec": "node ./js/main.js",
+    "makedata": "node ./js/makedata.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,10 @@
   },
   "homepage": "https://github.com/matsuyou1001/UmaBirthdayBot#readme",
   "dependencies": {
-    "axios": "^0.26.0"
+    "axios": "^0.26.0",
+    "jsdom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^16.2.14"
   }
 }
