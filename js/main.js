@@ -3,7 +3,7 @@ import path from "path";
 import url from "url";
 import webhooks from "./helper/webhooks.js";
 
-async function main() {      
+async function main() {
     const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
     const configPath = path.join(__dirname, "..", "config.json")
@@ -12,14 +12,15 @@ async function main() {
     const dataPath = path.join(__dirname, "..", "data.json")
     const { umamusumes } = JSON.parse(await fs.readFile(dataPath, "utf8"));
     const now = new Date();
-    const today = ("0" + (now.getMonth() + 1)).slice(-2) + "/" + ("0" + (now.getDate())).slice(-2);
+    const today = ("0" + (now.getMonth() + 1)).slice(-2) + "/" + ("0" + now.getDate()).slice(-2);
 
-    const todayumas = umamusumes.filter(uma => uma.birthday == today);
-    if (todayumas.length == 0) {
+    const todayumas = umamusumes.filter(uma => uma.birthday === today);
+    if (todayumas.length === 0) {
         return 1;
     }
+    let hasNotImplemented = todayumas.some(uma => !uma.is_implemented);
 
-    const title = `🎉 今日は、${todayumas.map(uma => replace_name(uma.name)).join("、")}の誕生日です！`
+    const title = `🎉 今日は、${todayumas.map(uma => replace_name(uma.name) + (!uma.is_implemented ? "\\*" : "")).join("、")}の誕生日です！`
 
     let current = today, elapsedYears = 0;
     const fields = [];
@@ -29,15 +30,16 @@ async function main() {
 
         const nextday = isLast ?
             umamusumes.map(uma => uma.birthday).sort().find(() => true) :
-            umamusumes.map(uma => uma.birthday).sort().find(day => current < day) ;
+            umamusumes.map(uma => uma.birthday).sort().find(day => current < day);
 
-        const nextumas = umamusumes.filter(uma => uma.birthday == nextday)
-        const date = new Date(`${now.getFullYear() + elapsedYears}/${nextday}`)
+        const nextumas = umamusumes.filter(uma => uma.birthday == nextday);
+        hasNotImplemented |= nextumas.some(uma => !uma.is_implemented);
+        const date = new Date(`${now.getFullYear() + elapsedYears}/${nextday}`);
         const days = Math.ceil((date - now) / 86400000);
 
         fields.push({
             name: `${date.getMonth() + 1}/${date.getDate()} (${days == 1 ? "明日" : days + "日後"})`,
-            value: nextumas.map(uma => uma.name).join("、")
+            value: nextumas.map(uma => uma.name + (!uma.is_implemented ? "\\*" : "")).join("、")
         });
 
         current = nextday;
@@ -51,6 +53,12 @@ async function main() {
 
     if (typeof color !== "undefined") {
         embed.color = color;
+    }
+
+    if (hasNotImplemented) {
+        embed.footer = {
+            text: "(*)は育成未実装"
+        };
     }
 
     await webhooks.exec(webhook_url, { username: user_name, avatar_url: avatar_url, embeds: [ embed ] });
