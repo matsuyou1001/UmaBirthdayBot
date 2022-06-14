@@ -2,327 +2,408 @@
   "umamusumes": [
     {
       "name": "アイネスフウジン",
-      "birthday": "04/10"
+      "birthday": "04/10",
+      "is_implemented": true
     },
     {
       "name": "アグネスタキオン",
-      "birthday": "04/13"
+      "birthday": "04/13",
+      "is_implemented": true
     },
     {
       "name": "アグネスデジタル",
-      "birthday": "05/15"
+      "birthday": "05/15",
+      "is_implemented": true
     },
     {
       "name": "アストンマーチャン",
-      "birthday": "03/05"
+      "birthday": "03/05",
+      "is_implemented": false
     },
     {
       "name": "アドマイヤベガ",
-      "birthday": "03/12"
+      "birthday": "03/12",
+      "is_implemented": true
     },
     {
       "name": "イクノディクタス",
-      "birthday": "04/16"
+      "birthday": "04/16",
+      "is_implemented": false
     },
     {
       "name": "イナリワン",
-      "birthday": "05/07"
+      "birthday": "05/07",
+      "is_implemented": true
     },
     {
       "name": "ウイニングチケット",
-      "birthday": "03/21"
+      "birthday": "03/21",
+      "is_implemented": true
     },
     {
       "name": "ウオッカ",
-      "birthday": "04/04"
+      "birthday": "04/04",
+      "is_implemented": true
     },
     {
       "name": "エアグルーヴ",
-      "birthday": "04/06"
+      "birthday": "04/06",
+      "is_implemented": true
     },
     {
       "name": "エアシャカール",
-      "birthday": "02/26"
+      "birthday": "02/26",
+      "is_implemented": false
     },
     {
       "name": "エイシンフラッシュ",
-      "birthday": "03/27"
+      "birthday": "03/27",
+      "is_implemented": true
     },
     {
       "name": "エルコンドルパサー",
-      "birthday": "03/17"
+      "birthday": "03/17",
+      "is_implemented": true
     },
     {
       "name": "オグリキャップ",
-      "birthday": "03/27"
+      "birthday": "03/27",
+      "is_implemented": true
     },
     {
       "name": "カレンチャン",
-      "birthday": "03/31"
+      "birthday": "03/31",
+      "is_implemented": true
     },
     {
       "name": "カワカミプリンセス",
-      "birthday": "06/05"
+      "birthday": "06/05",
+      "is_implemented": true
     },
     {
       "name": "キタサンブラック",
-      "birthday": "03/10"
+      "birthday": "03/10",
+      "is_implemented": true
     },
     {
       "name": "キングヘイロー",
-      "birthday": "04/28"
+      "birthday": "04/28",
+      "is_implemented": true
     },
     {
       "name": "グラスワンダー",
-      "birthday": "02/18"
+      "birthday": "02/18",
+      "is_implemented": true
     },
     {
       "name": "ゴールドシチー",
-      "birthday": "04/16"
+      "birthday": "04/16",
+      "is_implemented": true
     },
     {
       "name": "ゴールドシップ",
-      "birthday": "03/06"
+      "birthday": "03/06",
+      "is_implemented": true
     },
     {
       "name": "コパノリッキー",
-      "birthday": "03/24"
+      "birthday": "03/24",
+      "is_implemented": false
     },
     {
       "name": "サイレンススズカ",
-      "birthday": "05/01"
+      "birthday": "05/01",
+      "is_implemented": true
     },
     {
       "name": "サクラチヨノオー",
-      "birthday": "02/19"
+      "birthday": "02/19",
+      "is_implemented": true
     },
     {
       "name": "サクラバクシンオー",
-      "birthday": "04/14"
+      "birthday": "04/14",
+      "is_implemented": true
     },
     {
       "name": "サクラローレル",
-      "birthday": "05/08"
+      "birthday": "05/08",
+      "is_implemented": false
     },
     {
       "name": "サトノダイヤモンド",
-      "birthday": "01/30"
+      "birthday": "01/30",
+      "is_implemented": true
     },
     {
       "name": "シーキングザパール",
-      "birthday": "04/16"
+      "birthday": "04/16",
+      "is_implemented": false
     },
     {
       "name": "シリウスシンボリ",
-      "birthday": "03/26"
+      "birthday": "03/26",
+      "is_implemented": false
     },
     {
       "name": "シンコウウインディ",
-      "birthday": "04/14"
+      "birthday": "04/14",
+      "is_implemented": false
     },
     {
       "name": "シンボリクリスエス",
-      "birthday": "01/21"
+      "birthday": "01/21",
+      "is_implemented": false
     },
     {
       "name": "シンボリルドルフ",
-      "birthday": "03/13"
+      "birthday": "03/13",
+      "is_implemented": true
     },
     {
       "name": "スイープトウショウ",
-      "birthday": "05/09"
+      "birthday": "05/09",
+      "is_implemented": false
     },
     {
       "name": "スーパークリーク",
-      "birthday": "05/27"
+      "birthday": "05/27",
+      "is_implemented": true
     },
     {
       "name": "スペシャルウィーク",
-      "birthday": "05/02"
+      "birthday": "05/02",
+      "is_implemented": true
     },
     {
       "name": "スマートファルコン",
-      "birthday": "04/04"
+      "birthday": "04/04",
+      "is_implemented": true
     },
     {
       "name": "セイウンスカイ",
-      "birthday": "04/26"
+      "birthday": "04/26",
+      "is_implemented": true
     },
     {
       "name": "ゼンノロブロイ",
-      "birthday": "03/27"
+      "birthday": "03/27",
+      "is_implemented": false
     },
     {
       "name": "タイキシャトル",
-      "birthday": "03/23"
+      "birthday": "03/23",
+      "is_implemented": true
     },
     {
       "name": "ダイタクヘリオス",
-      "birthday": "04/10"
+      "birthday": "04/10",
+      "is_implemented": false
     },
     {
       "name": "ダイワスカーレット",
-      "birthday": "05/13"
+      "birthday": "05/13",
+      "is_implemented": true
     },
     {
       "name": "タニノギムレット",
-      "birthday": "05/04"
+      "birthday": "05/04",
+      "is_implemented": false
     },
     {
       "name": "タマモクロス",
-      "birthday": "05/23"
+      "birthday": "05/23",
+      "is_implemented": true
     },
     {
       "name": "ツインターボ",
-      "birthday": "04/13"
+      "birthday": "04/13",
+      "is_implemented": false
     },
     {
       "name": "ツルマルツヨシ",
-      "birthday": "04/06"
+      "birthday": "04/06",
+      "is_implemented": false
     },
     {
       "name": "テイエムオペラオー",
-      "birthday": "03/13"
+      "birthday": "03/13",
+      "is_implemented": true
     },
     {
       "name": "トウカイテイオー",
-      "birthday": "04/20"
+      "birthday": "04/20",
+      "is_implemented": true
     },
     {
       "name": "トーセンジョーダン",
-      "birthday": "02/04"
+      "birthday": "02/04",
+      "is_implemented": true
     },
     {
       "name": "ナイスネイチャ",
-      "birthday": "04/16"
+      "birthday": "04/16",
+      "is_implemented": true
     },
     {
       "name": "ナカヤマフェスタ",
-      "birthday": "04/05"
+      "birthday": "04/05",
+      "is_implemented": false
     },
     {
       "name": "ナリタタイシン",
-      "birthday": "06/10"
+      "birthday": "06/10",
+      "is_implemented": true
     },
     {
       "name": "ナリタトップロード",
-      "birthday": "04/04"
+      "birthday": "04/04",
+      "is_implemented": false
     },
     {
       "name": "ナリタブライアン",
-      "birthday": "05/03"
+      "birthday": "05/03",
+      "is_implemented": true
     },
     {
       "name": "ニシノフラワー",
-      "birthday": "04/19"
+      "birthday": "04/19",
+      "is_implemented": true
     },
     {
       "name": "ハルウララ",
-      "birthday": "02/27"
+      "birthday": "02/27",
+      "is_implemented": true
     },
     {
       "name": "バンブーメモリー",
-      "birthday": "05/14"
+      "birthday": "05/14",
+      "is_implemented": false
     },
     {
       "name": "ビコーペガサス",
-      "birthday": "02/08"
+      "birthday": "02/08",
+      "is_implemented": false
     },
     {
       "name": "ヒシアケボノ",
-      "birthday": "02/27"
+      "birthday": "02/27",
+      "is_implemented": true
     },
     {
       "name": "ヒシアマゾン",
-      "birthday": "03/26"
+      "birthday": "03/26",
+      "is_implemented": true
     },
     {
       "name": "ビワハヤヒデ",
-      "birthday": "03/10"
+      "birthday": "03/10",
+      "is_implemented": true
     },
     {
       "name": "ファインモーション",
-      "birthday": "01/27"
+      "birthday": "01/27",
+      "is_implemented": true
     },
     {
       "name": "フジキセキ",
-      "birthday": "04/15"
+      "birthday": "04/15",
+      "is_implemented": true
     },
     {
       "name": "マーベラスサンデー",
-      "birthday": "05/31"
+      "birthday": "05/31",
+      "is_implemented": false
     },
     {
       "name": "マチカネタンホイザ",
-      "birthday": "05/07"
+      "birthday": "05/07",
+      "is_implemented": true
     },
     {
       "name": "マチカネフクキタル",
-      "birthday": "05/22"
+      "birthday": "05/22",
+      "is_implemented": true
     },
     {
       "name": "マヤノトップガン",
-      "birthday": "03/24"
+      "birthday": "03/24",
+      "is_implemented": true
     },
     {
       "name": "マルゼンスキー",
-      "birthday": "05/19"
+      "birthday": "05/19",
+      "is_implemented": true
     },
     {
       "name": "マンハッタンカフェ",
-      "birthday": "03/05"
+      "birthday": "03/05",
+      "is_implemented": true
     },
     {
       "name": "ミスターシービー",
-      "birthday": "04/07"
+      "birthday": "04/07",
+      "is_implemented": false
     },
     {
       "name": "ミホノブルボン",
-      "birthday": "04/25"
+      "birthday": "04/25",
+      "is_implemented": true
     },
     {
       "name": "メイショウドトウ",
-      "birthday": "03/25"
+      "birthday": "03/25",
+      "is_implemented": true
     },
     {
       "name": "メジロアルダン",
-      "birthday": "03/28"
+      "birthday": "03/28",
+      "is_implemented": true
     },
     {
       "name": "メジロドーベル",
-      "birthday": "05/06"
+      "birthday": "05/06",
+      "is_implemented": true
     },
     {
       "name": "メジロパーマー",
-      "birthday": "03/21"
+      "birthday": "03/21",
+      "is_implemented": true
     },
     {
       "name": "メジロブライト",
-      "birthday": "04/19"
+      "birthday": "04/19",
+      "is_implemented": true
     },
     {
       "name": "メジロマックイーン",
-      "birthday": "04/03"
+      "birthday": "04/03",
+      "is_implemented": true
     },
     {
       "name": "メジロライアン",
-      "birthday": "04/11"
+      "birthday": "04/11",
+      "is_implemented": true
     },
     {
       "name": "ヤエノムテキ",
-      "birthday": "04/11"
+      "birthday": "04/11",
+      "is_implemented": true
     },
     {
       "name": "ヤマニンゼファー",
-      "birthday": "05/27"
+      "birthday": "05/27",
+      "is_implemented": false
     },
     {
       "name": "ユキノビジン",
-      "birthday": "03/10"
+      "birthday": "03/10",
+      "is_implemented": false
     },
     {
       "name": "ライスシャワー",
-      "birthday": "03/05"
+      "birthday": "03/05",
+      "is_implemented": true
     }
   ]
 }
