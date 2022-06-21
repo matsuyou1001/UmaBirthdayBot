@@ -163,7 +163,7 @@
     {
       "name": "スイープトウショウ",
       "birthday": "05/09",
-      "is_implemented": false
+      "is_implemented": true
     },
     {
       "name": "スーパークリーク",
